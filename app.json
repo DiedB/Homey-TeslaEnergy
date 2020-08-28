@@ -1,0 +1,67 @@
+{
+  "id": "com.tesla.energy",
+  "version": "1.0.0",
+  "compatibility": ">=1.5.0",
+  "sdk": 2,
+  "brandColor": "#e82127",
+  "name": {
+    "en": "Tesla Energy"
+  },
+  "description": {
+    "en": "Adds support for Tesla Energy products."
+  },
+  "category": [
+    "energy"
+  ],
+  "permissions": [],
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  },
+  "author": {
+    "name": "Diederik Bakker",
+    "email": "diederik@outlook.com"
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "diederik"
+      }
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/DiedB/Homey-TeslaEnergy/issues"
+  },
+  "drivers": [
+    {
+      "id": "tesla-gateway",
+      "name": {
+        "en": "Tesla Gateway"
+      },
+      "class": "other",
+      "capabilities": [
+        "measure_battery"
+      ],
+      "images": {
+        "large": "/drivers/tesla-gateway/assets/images/large.png",
+        "small": "/drivers/tesla-gateway/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "pair"
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    }
+  ]
+}

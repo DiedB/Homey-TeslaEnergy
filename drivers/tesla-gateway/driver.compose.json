@@ -1,0 +1,28 @@
+{
+  "id": "tesla-gateway",
+  "name": {
+    "en": "Tesla Gateway"
+  },
+  "class": "other",
+  "capabilities": ["measure_battery"],
+  "images": {
+    "large": "/drivers/tesla-gateway/assets/images/large.png",
+    "small": "/drivers/tesla-gateway/assets/images/small.png"
+  },
+  "pair": [
+    {
+      "id": "pair"
+    },
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": {
+        "next": "add_devices"
+      }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ]
+}
