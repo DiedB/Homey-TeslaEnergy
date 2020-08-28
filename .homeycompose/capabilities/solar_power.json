@@ -1,0 +1,19 @@
+{
+    "type": "number",
+    "title": {
+      "en": "Solar production"
+    },
+    "icon": "/assets/capabilities/solar-power.svg",
+    "units": {
+      "en": "W"
+    },
+    "insights": true,
+    "desc": {
+      "en": "Solar production in W"
+    },
+    "chartType": "stepLine",
+    "decimals": 2,
+    "getable": true,
+    "setable": false,
+    "uiComponent": "sensor"
+  }

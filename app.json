@@ -8,15 +8,15 @@
     "en": "Tesla Energy"
   },
   "description": {
-    "en": "Adds support for Tesla Energy products."
+    "en": "Monitor your Tesla Energy system"
   },
   "category": [
     "energy"
   ],
   "permissions": [],
   "images": {
-    "large": "/assets/images/large.png",
-    "small": "/assets/images/small.png"
+    "large": "/assets/images/large.jpg",
+    "small": "/assets/images/small.jpg"
   },
   "author": {
     "name": "Diederik Bakker",
@@ -32,36 +32,127 @@
   "bugs": {
     "url": "https://github.com/DiedB/Homey-TeslaEnergy/issues"
   },
+  "source": "https://github.com/DiedB/Homey-TeslaEnergy",
   "drivers": [
     {
-      "id": "tesla-gateway",
+      "id": "tesla-backup-gateway",
       "name": {
-        "en": "Tesla Gateway"
+        "en": "Tesla Backup Gateway"
       },
       "class": "other",
       "capabilities": [
-        "measure_battery"
+        "battery_power",
+        "battery_soc",
+        "grid_power",
+        "home_power",
+        "solar_power"
       ],
       "images": {
-        "large": "/drivers/tesla-gateway/assets/images/large.png",
-        "small": "/drivers/tesla-gateway/assets/images/small.png"
+        "large": "/drivers/tesla-backup-gateway/assets/images/large.jpg",
+        "small": "/drivers/tesla-backup-gateway/assets/images/small.jpg"
       },
       "pair": [
         {
           "id": "pair"
-        },
-        {
-          "id": "list_devices",
-          "template": "list_devices",
-          "navigation": {
-            "next": "add_devices"
-          }
-        },
-        {
-          "id": "add_devices",
-          "template": "add_devices"
         }
       ]
     }
-  ]
+  ],
+  "capabilities": {
+    "battery_power": {
+      "type": "number",
+      "title": {
+        "en": "Powerwall draw"
+      },
+      "icon": "/assets/capabilities/battery-power.svg",
+      "units": {
+        "en": "W"
+      },
+      "insights": true,
+      "desc": {
+        "en": "Powerwall power draw in W"
+      },
+      "chartType": "stepLine",
+      "decimals": 2,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "battery_soc": {
+      "type": "number",
+      "title": {
+        "en": "Powerwall SoC"
+      },
+      "icon": "/assets/capabilities/battery-soc.svg",
+      "units": {
+        "en": "%"
+      },
+      "insights": true,
+      "desc": {
+        "en": "Powerwall SoC percentage"
+      },
+      "chartType": "stepLine",
+      "decimals": 2,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "grid_power": {
+      "type": "number",
+      "title": {
+        "en": "Grid consumption"
+      },
+      "icon": "/assets/capabilities/grid-power.svg",
+      "units": {
+        "en": "W"
+      },
+      "insights": true,
+      "desc": {
+        "en": "Grid power consumption in W"
+      },
+      "chartType": "stepLine",
+      "decimals": 2,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "home_power": {
+      "type": "number",
+      "title": {
+        "en": "Home consumption"
+      },
+      "icon": "/assets/capabilities/home-power.svg",
+      "units": {
+        "en": "W"
+      },
+      "insights": true,
+      "desc": {
+        "en": "Home power consumption in W"
+      },
+      "chartType": "stepLine",
+      "decimals": 2,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "solar_power": {
+      "type": "number",
+      "title": {
+        "en": "Solar production"
+      },
+      "icon": "/assets/capabilities/solar-power.svg",
+      "units": {
+        "en": "W"
+      },
+      "insights": true,
+      "desc": {
+        "en": "Solar production in W"
+      },
+      "chartType": "stepLine",
+      "decimals": 2,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    }
+  }
 }

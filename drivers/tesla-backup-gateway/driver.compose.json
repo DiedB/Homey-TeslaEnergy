@@ -1,0 +1,17 @@
+{
+  "id": "tesla-backup-gateway",
+  "name": {
+    "en": "Tesla Backup Gateway"
+  },
+  "class": "other",
+  "capabilities": ["battery_power", "battery_soc", "grid_power", "home_power", "solar_power"],
+  "images": {
+    "large": "/drivers/tesla-backup-gateway/assets/images/large.jpg",
+    "small": "/drivers/tesla-backup-gateway/assets/images/small.jpg"
+  },
+  "pair": [
+    {
+      "id": "pair"
+    }
+  ]
+}

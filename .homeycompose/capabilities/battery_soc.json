@@ -1,0 +1,19 @@
+{
+    "type": "number",
+    "title": {
+      "en": "Powerwall SoC"
+    },
+    "icon": "/assets/capabilities/battery-soc.svg",
+    "units": {
+      "en": "%"
+    },
+    "insights": true,
+    "desc": {
+      "en": "Powerwall SoC percentage"
+    },
+    "chartType": "stepLine",
+    "decimals": 2,
+    "getable": true,
+    "setable": false,
+    "uiComponent": "sensor"
+  }

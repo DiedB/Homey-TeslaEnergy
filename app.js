@@ -2,12 +2,10 @@
 
 const Homey = require('homey');
 
-class MyApp extends Homey.App {
-	
+class TeslaEnergy extends Homey.App {
 	onInit() {
-		this.log('MyApp is running...');
+		this.log('Tesla Energy app is running');
 	}
-	
 }
 
-module.exports = MyApp;
+module.exports = TeslaEnergy;

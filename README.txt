@@ -1,1 +1,1 @@
-Adds support for Tesla Energy products.
+Adds support for Tesla Energy products

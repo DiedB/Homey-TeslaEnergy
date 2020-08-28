@@ -1,0 +1,19 @@
+{
+    "type": "number",
+    "title": {
+      "en": "Powerwall draw"
+    },
+    "icon": "/assets/capabilities/battery-power.svg",
+    "units": {
+      "en": "W"
+    },
+    "insights": true,
+    "desc": {
+      "en": "Powerwall power draw in W"
+    },
+    "chartType": "stepLine",
+    "decimals": 2,
+    "getable": true,
+    "setable": false,
+    "uiComponent": "sensor"
+  }

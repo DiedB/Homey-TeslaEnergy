@@ -1,0 +1,19 @@
+{
+    "type": "number",
+    "title": {
+      "en": "Grid consumption"
+    },
+    "icon": "/assets/capabilities/grid-power.svg",
+    "units": {
+      "en": "W"
+    },
+    "insights": true,
+    "desc": {
+      "en": "Grid power consumption in W"
+    },
+    "chartType": "stepLine",
+    "decimals": 2,
+    "getable": true,
+    "setable": false,
+    "uiComponent": "sensor"
+  }
