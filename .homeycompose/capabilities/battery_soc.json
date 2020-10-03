@@ -1,7 +1,9 @@
 {
     "type": "number",
     "title": {
-      "en": "Powerwall SoC"
+      "en": "Powerwall SoC",
+      "nl": "Powerwall-laadtoestand",
+      "de": "Powerwall Ladezustand"
     },
     "icon": "/assets/capabilities/battery-soc.svg",
     "units": {

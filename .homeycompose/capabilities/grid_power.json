@@ -1,7 +1,9 @@
 {
     "type": "number",
     "title": {
-      "en": "Grid consumption"
+      "en": "Grid consumption",
+      "nl": "Netverbruik",
+      "de": "Netzbezug"
     },
     "icon": "/assets/capabilities/grid-power.svg",
     "units": {

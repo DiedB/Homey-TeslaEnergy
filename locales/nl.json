@@ -1,0 +1,7 @@
+{
+	"pair": {
+		"enterIpAddress": "Voer het IP-adres van je Tesla Powerwall in:",
+		"ipAddressPlaceholder": "IP-adres",
+		"connectButton": "Verbinden"
+    }
+}

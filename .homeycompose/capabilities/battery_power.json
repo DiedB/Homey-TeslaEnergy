@@ -1,7 +1,9 @@
 {
     "type": "number",
     "title": {
-      "en": "Powerwall draw"
+      "en": "Powerwall draw",
+      "nl": "Powerwall-verbruik",
+      "de": "Powerwall Verbrauch"
     },
     "icon": "/assets/capabilities/battery-power.svg",
     "units": {

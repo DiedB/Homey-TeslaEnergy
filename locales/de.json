@@ -1,10 +1,7 @@
 {
-	"Powerwall SoC": "PowerWall Verbrauch",
-	"Powerwall SoC percentage": "PowerWall %",
-	"Grid consumption": "Netzbezug",
-	"Home consumption": "Hausverbrauch",
-	"Solar production": "Solarenergie",
-	"Please enter your Tesla Powerwall IP address:": "Bitte geben Sie Ihre Tesla Powerwall IP Addresse ein:",
-	"IP address": "IP Adresse",
-	"Connect": "Verbinden"
+	"pair": {
+		"enterIpAddress": "Bitte geben Sie Ihre Tesla Powerwall IP Addresse ein:",
+		"ipAddressPlaceholder": "IP Adresse",
+		"connectButton": "Verbinden"
+	}
 }

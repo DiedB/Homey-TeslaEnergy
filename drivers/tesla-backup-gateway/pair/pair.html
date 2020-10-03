@@ -16,15 +16,17 @@
 
 <div class="form-group">
 	<div class="input-field">
-		<label>Please enter your Tesla Powerwall IP address:</label>
-		<input type="text" id="ipAddress" placeholder="IP address" value="" />
+		<label><span data-i18n="pair.enterIpAddress"></label>
+		<input type="text" id="ipAddress" placeholder="" value="" />
 	</div>
 
-	<button class="submit-button" id="validate">Connect</button>
+	<button class="submit-button" id="validate" data-i18n="pair.connectButton"></button>
 </div>
 
 <script type="text/javascript">
 	$(() => {
+		$('#ipAddress').attr('placeholder', Homey.__("pair.ipAddressPlaceholder"));
+
 		$('#validate').click(() => {
 			Homey.showLoadingOverlay();
 
