@@ -1,7 +1,9 @@
 {
     "type": "number",
     "title": {
-      "en": "Home consumption"
+      "en": "Home consumption",
+      "nl": "Huisverbruik",
+      "de": "Hausverbrauch"
     },
     "icon": "/assets/capabilities/home-power.svg",
     "units": {

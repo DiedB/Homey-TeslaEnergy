@@ -1,7 +1,9 @@
 {
     "type": "number",
     "title": {
-      "en": "Solar production"
+      "en": "Solar production",
+      "nl": "Productie zonnepanelen",
+      "de": "Solarenergie"
     },
     "icon": "/assets/capabilities/solar-power.svg",
     "units": {

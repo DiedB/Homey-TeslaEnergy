@@ -62,7 +62,9 @@
     "battery_power": {
       "type": "number",
       "title": {
-        "en": "Powerwall draw"
+        "en": "Powerwall draw",
+        "nl": "Powerwall-verbruik",
+        "de": "Powerwall Verbrauch"
       },
       "icon": "/assets/capabilities/battery-power.svg",
       "units": {
@@ -81,7 +83,9 @@
     "battery_soc": {
       "type": "number",
       "title": {
-        "en": "Powerwall SoC"
+        "en": "Powerwall SoC",
+        "nl": "Powerwall-laadtoestand",
+        "de": "Powerwall Ladezustand"
       },
       "icon": "/assets/capabilities/battery-soc.svg",
       "units": {
@@ -100,7 +104,9 @@
     "grid_power": {
       "type": "number",
       "title": {
-        "en": "Grid consumption"
+        "en": "Grid consumption",
+        "nl": "Netverbruik",
+        "de": "Netzbezug"
       },
       "icon": "/assets/capabilities/grid-power.svg",
       "units": {
@@ -119,7 +125,9 @@
     "home_power": {
       "type": "number",
       "title": {
-        "en": "Home consumption"
+        "en": "Home consumption",
+        "nl": "Huisverbruik",
+        "de": "Hausverbrauch"
       },
       "icon": "/assets/capabilities/home-power.svg",
       "units": {
@@ -138,7 +146,9 @@
     "solar_power": {
       "type": "number",
       "title": {
-        "en": "Solar production"
+        "en": "Solar production",
+        "nl": "Productie zonnepanelen",
+        "de": "Solarenergie"
       },
       "icon": "/assets/capabilities/solar-power.svg",
       "units": {
