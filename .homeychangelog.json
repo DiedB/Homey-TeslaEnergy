@@ -4,5 +4,8 @@
   },
   "1.0.1": {
     "en": "Update README"
+  },
+  "1.0.2": {
+    "en": "Add German and Dutch translations"
   }
 }
