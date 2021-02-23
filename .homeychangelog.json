@@ -7,5 +7,8 @@
   },
   "1.0.2": {
     "en": "Add German and Dutch translations"
+  },
+  "1.1.0": {
+    "en": "Support basic auth (Backup Gateway firmware >=20.49)"
   }
 }

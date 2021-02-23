@@ -1,8 +1,8 @@
 {
   "id": "com.tesla.energy",
-  "version": "1.0.2",
-  "compatibility": ">=1.5.0",
-  "sdk": 2,
+  "version": "1.1.0",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
   "brandColor": "#e82127",
   "name": {
     "en": "Tesla Energy"
@@ -53,7 +53,30 @@
       },
       "pair": [
         {
-          "id": "pair"
+          "id": "ip_address"
+        },
+        {
+          "id": "login_credentials",
+          "template": "login_credentials",
+          "options": {
+            "logo": "pair.svg",
+            "usernameLabel": "Email address",
+            "usernamePlaceholder": "elon@tesla.com"
+          },
+          "navigation": {
+            "previous": "ip_address"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
         }
       ]
     }
