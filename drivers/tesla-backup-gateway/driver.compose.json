@@ -1,17 +1,46 @@
 {
-  "id": "tesla-backup-gateway",
-  "name": {
-    "en": "Tesla Backup Gateway"
-  },
-  "class": "other",
-  "capabilities": ["battery_power", "battery_soc", "grid_power", "home_power", "solar_power"],
-  "images": {
-    "large": "/drivers/tesla-backup-gateway/assets/images/large.jpg",
-    "small": "/drivers/tesla-backup-gateway/assets/images/small.jpg"
-  },
-  "pair": [
-    {
-      "id": "pair"
-    }
-  ]
+    "id": "tesla-backup-gateway",
+    "name": {
+        "en": "Tesla Backup Gateway"
+    },
+    "class": "other",
+    "capabilities": [
+        "battery_power",
+        "battery_soc",
+        "grid_power",
+        "home_power",
+        "solar_power"
+    ],
+    "images": {
+        "large": "/drivers/tesla-backup-gateway/assets/images/large.jpg",
+        "small": "/drivers/tesla-backup-gateway/assets/images/small.jpg"
+    },
+    "pair": [
+        {
+            "id": "ip_address"
+        },
+        {
+            "id": "login_credentials",
+            "template": "login_credentials",
+            "options": {
+                "logo": "pair.svg",
+                "usernameLabel": "Email address",
+                "usernamePlaceholder": "elon@tesla.com"
+            },
+            "navigation": {
+                "previous": "ip_address"
+            }
+        },
+        {
+            "id": "list_devices",
+            "template": "list_devices",
+            "navigation": {
+                "next": "add_devices"
+            }
+        },
+        {
+            "id": "add_devices",
+            "template": "add_devices"
+        }
+    ]
 }

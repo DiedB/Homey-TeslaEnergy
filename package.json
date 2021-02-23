@@ -1,12 +1,11 @@
 {
-  "name": "com.tesla.energy",
-  "version": "1.0.0",
-  "main": "app.js",
-  "devDependencies": {
-    "homey": "^2.6.1"
-  },
-  "dependencies": {
-    "node-fetch": "^2.6.0",
-    "uuid": "^8.3.0"
-  }
+    "name": "com.tesla.energy",
+    "version": "1.0.0",
+    "main": "app.js",
+    "devDependencies": {
+        "homey": "^2.9.7"
+    },
+    "dependencies": {
+        "node-fetch": "^2.6.1"
+    }
 }

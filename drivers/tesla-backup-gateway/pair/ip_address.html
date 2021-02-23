@@ -1,0 +1,51 @@
+<style type="text/css">
+    .form-group,
+    .input-field {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input-field {
+        margin-top: 10px;
+    }
+
+    .submit-button {
+        margin-top: 10px;
+    }
+</style>
+
+<div class="form-group">
+    <div class="input-field">
+        <label><span data-i18n="pair.enterIpAddress" /></label>
+        <input type="text" id="ipAddress" placeholder="" value="" />
+    </div>
+
+    <button
+        class="submit-button"
+        id="submit"
+        data-i18n="pair.connectButton"
+    ></button>
+</div>
+
+<script type="text/javascript">
+    $(() => {
+        $("#ipAddress").attr(
+            "placeholder",
+            Homey.__("pair.ipAddressPlaceholder")
+        );
+
+        $("#submit").click(() => {
+            Homey.showLoadingOverlay();
+
+            var ipAddress = $("#ipAddress").val();
+
+            Homey.emit("ip_address", { ipAddress }, (error, result) => {
+                Homey.hideLoadingOverlay();
+                if (error) {
+                    Homey.alert(error);
+                }
+            });
+        });
+    });
+</script>

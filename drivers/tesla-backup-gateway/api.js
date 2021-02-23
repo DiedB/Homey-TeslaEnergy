@@ -1,51 +1,90 @@
-const fetch = require('node-fetch');
-const https = require('https');
+const fetch = require("node-fetch");
+const https = require("https");
 
 class TeslaBackupGatewayApi {
     endpoints = {
-        siteName: '/site_info/site_name',
-        siteStatus: '/sitemaster',
-        batterySoc: '/system_status/soe',
-        meterAggregates: '/meters/aggregates'
-    }
+        login: "/login/Basic",
+        status: "/status",
+        siteName: "/site_info/site_name",
+        batterySoc: "/system_status/soe",
+        meterAggregates: "/meters/aggregates",
+    };
 
-    constructor(ipAddress) {
+    constructor(ipAddress, username, password) {
         this.baseUrl = `https://${ipAddress}/api`;
+        this.username = username;
+        this.password = password;
+        this.cookieHeader = "";
     }
 
-    getConnectionStatus() {
-        return this.connected;
-    }
+    async apiRequest(endpoint, body) {
+        const requestOptions = body
+            ? {
+                  method: "POST",
+                  headers: {
+                      "Content-Type": "application/json",
+                      Cookie: this.cookieHeader,
+                  },
+                  body: JSON.stringify(body),
+              }
+            : {
+                  headers: {
+                      Cookie: this.cookieHeader,
+                  },
+              };
 
-    async apiRequest(endpoint) {
         const apiResponse = await fetch(`${this.baseUrl}${endpoint}`, {
             agent: new https.Agent({
-                rejectUnauthorized: false
-            })
+                rejectUnauthorized: false,
+            }),
+            ...requestOptions,
         });
 
+        // TODO: remove debugging statement before release
+        this.log(apiResponse);
+
         if (apiResponse.ok) {
-            return await apiResponse.json();
+            return apiResponse;
+        } else if (apiResponse.status >= 400 && apiResponse.status < 500) {
+            throw "Invalid credentials or session expired";
         }
 
-        throw "Tesla Backup Gateway connection failed"
+        throw "Tesla Backup Gateway connection failed";
     }
 
-    async connect() {
-        await this.apiRequest(this.endpoints.siteStatus);
-        this.connected = true;
+    async login() {
+        const loginResponse = await this.apiRequest(this.endpoints.login, {
+            username: "customer",
+            email: this.username,
+            password: this.password,
+            force_sm_off: false,
+        });
+
+        this.cookieHeader = loginResponse.headers
+            .raw()
+            ["set-cookie"].map((cookie) => cookie.split(";")[0])
+            .join(";");
     }
 
     async getSiteName() {
-        return (await this.apiRequest(this.endpoints.siteName)).site_name;
+        const siteNameResponse = await this.apiRequest(this.endpoints.siteName);
+        const siteNameJson = await siteNameResponse.json();
+        return siteNameJson.site_name;
     }
 
     async getBatterySoc() {
-        return (await this.apiRequest(this.endpoints.batterySoc)).percentage;
+        const batterySocResponse = await this.apiRequest(
+            this.endpoints.batterySoc
+        );
+        const batterySocJson = await batterySocResponse.json();
+        return batterySocJson.percentage;
     }
 
     async getMeterAggregates() {
-        return (await this.apiRequest(this.endpoints.meterAggregates));
+        const meterAggregatesResponse = await this.apiRequest(
+            this.endpoints.meterAggregates
+        );
+        return await meterAggregatesResponse.json();
     }
 }
 
