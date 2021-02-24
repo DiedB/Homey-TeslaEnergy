@@ -10,5 +10,8 @@
   },
   "1.1.0": {
     "en": "Support basic auth (Backup Gateway firmware >=20.49)"
+  },
+  "1.1.1": {
+    "en": "Support authentication (Backup Gateway firmware >=20.49)"
   }
 }

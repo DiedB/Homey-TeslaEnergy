@@ -1,6 +1,6 @@
 {
   "id": "com.tesla.energy",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "brandColor": "#e82127",
@@ -51,6 +51,48 @@
         "large": "/drivers/tesla-backup-gateway/assets/images/large.jpg",
         "small": "/drivers/tesla-backup-gateway/assets/images/small.jpg"
       },
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Credentials"
+          },
+          "children": [
+            {
+              "id": "username",
+              "type": "text",
+              "label": {
+                "en": "Username"
+              }
+            },
+            {
+              "id": "password",
+              "type": "password",
+              "label": {
+                "en": "Password"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Connection"
+          },
+          "children": [
+            {
+              "id": "ipAddress",
+              "type": "text",
+              "label": {
+                "en": "IP Address"
+              },
+              "hint": {
+                "en": "The IP address or hostname of your Tesla Backup Gateway."
+              }
+            }
+          ]
+        }
+      ],
       "pair": [
         {
           "id": "ip_address"
