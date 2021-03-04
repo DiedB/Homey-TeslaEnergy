@@ -1,6 +1,6 @@
 {
   "id": "com.tesla.energy",
-  "version": "1.1.1",
+  "version": "1.1.4",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "brandColor": "#e82127",
@@ -43,6 +43,7 @@
       "capabilities": [
         "battery_power",
         "battery_soc",
+        "measure_battery",
         "grid_power",
         "home_power",
         "solar_power"
@@ -51,7 +52,30 @@
         "large": "/drivers/tesla-backup-gateway/assets/images/large.jpg",
         "small": "/drivers/tesla-backup-gateway/assets/images/small.jpg"
       },
+      "energy": {
+        "batteries": [
+          "OTHER"
+        ]
+      },
       "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Connection"
+          },
+          "children": [
+            {
+              "id": "ipAddress",
+              "type": "text",
+              "label": {
+                "en": "IP Address"
+              },
+              "hint": {
+                "en": "The IP address or hostname of your Tesla Backup Gateway."
+              }
+            }
+          ]
+        },
         {
           "type": "group",
           "label": {
@@ -73,24 +97,6 @@
               }
             }
           ]
-        },
-        {
-          "type": "group",
-          "label": {
-            "en": "Connection"
-          },
-          "children": [
-            {
-              "id": "ipAddress",
-              "type": "text",
-              "label": {
-                "en": "IP Address"
-              },
-              "hint": {
-                "en": "The IP address or hostname of your Tesla Backup Gateway."
-              }
-            }
-          ]
         }
       ],
       "pair": [
@@ -104,9 +110,6 @@
             "logo": "pair.svg",
             "usernameLabel": "Email address",
             "usernamePlaceholder": "elon@tesla.com"
-          },
-          "navigation": {
-            "previous": "ip_address"
           }
         },
         {
