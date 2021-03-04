@@ -40,9 +40,6 @@ class TeslaBackupGatewayApi {
             ...requestOptions,
         });
 
-        // TODO: remove debugging statement before release
-        this.log(apiResponse);
-
         if (apiResponse.ok) {
             return apiResponse;
         } else if (apiResponse.status >= 400 && apiResponse.status < 500) {
@@ -53,17 +50,20 @@ class TeslaBackupGatewayApi {
     }
 
     async login() {
-        const loginResponse = await this.apiRequest(this.endpoints.login, {
-            username: "customer",
-            email: this.username,
-            password: this.password,
-            force_sm_off: false,
-        });
+        // Do not login if username and password have not been set (assume firmware before 20.49)
+        if (this.username && this.password) {
+            const loginResponse = await this.apiRequest(this.endpoints.login, {
+                username: "customer",
+                email: this.username,
+                password: this.password,
+                force_sm_off: false,
+            });
 
-        this.cookieHeader = loginResponse.headers
-            .raw()
-            ["set-cookie"].map((cookie) => cookie.split(";")[0])
-            .join(";");
+            this.cookieHeader = loginResponse.headers
+                .raw()
+                ["set-cookie"].map((cookie) => cookie.split(";")[0])
+                .join(";");
+        }
     }
 
     async getSiteName() {

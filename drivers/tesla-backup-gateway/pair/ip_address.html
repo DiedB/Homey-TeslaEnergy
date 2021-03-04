@@ -36,16 +36,8 @@
         );
 
         $("#submit").click(() => {
-            Homey.showLoadingOverlay();
-
             var ipAddress = $("#ipAddress").val();
-
-            Homey.emit("ip_address", { ipAddress }, (error, result) => {
-                Homey.hideLoadingOverlay();
-                if (error) {
-                    Homey.alert(error);
-                }
-            });
+            Homey.emit("ip_address", { ipAddress });
         });
     });
 </script>

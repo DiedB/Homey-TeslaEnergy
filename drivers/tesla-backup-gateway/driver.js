@@ -9,31 +9,30 @@ class TeslaBackupGatewayDriver extends Homey.Driver {
         let devices = [];
 
         session.setHandler("ip_address", async ({ ipAddress }) => {
-            this.log(ipAddress);
             pairIpAddress = ipAddress;
             await session.nextView();
+
+            return true;
         });
 
         session.setHandler("login", async ({ username, password }) => {
             const teslaBackupGatewayApi = new TeslaBackupGatewayApi(
-                ipAddress,
+                pairIpAddress,
                 username,
                 password
             );
 
-            // TODO: return to previous page when necessary
+            // TODO: return to previous page when necessary (on ECONNREFUSED)
             await teslaBackupGatewayApi.login();
-
             const siteName = await teslaBackupGatewayApi.getSiteName();
 
-            // TODO: add settings to driver.compose.json
             devices.push({
                 name: siteName,
                 data: {},
-                settings: { ipAddress, username, password },
+                settings: { ipAddress: pairIpAddress, username, password },
             });
 
-            await session.nextView();
+            return true;
         });
 
         session.setHandler("list_devices", async () => {
