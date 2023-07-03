@@ -1,14 +1,17 @@
 {
-    "1.0.0": {
-        "en": "Add support for Tesla Backup Gateway"
-    },
-    "1.0.1": {
-        "en": "Update README"
-    },
-    "1.0.2": {
-        "en": "Add German and Dutch translations"
-    },
-    "1.1.4": {
-        "en": "Support authentication (Backup Gateway firmware >=20.49) and add battery tab"
-    }
+  "1.0.0": {
+    "en": "Add support for Tesla Backup Gateway"
+  },
+  "1.0.1": {
+    "en": "Update README"
+  },
+  "1.0.2": {
+    "en": "Add German and Dutch translations"
+  },
+  "1.1.4": {
+    "en": "Support authentication (Backup Gateway firmware >=20.49) and add battery tab"
+  },
+  "1.2.0": {
+    "en": "Rewrite app in TS, prepare for verified status"
+  }
 }

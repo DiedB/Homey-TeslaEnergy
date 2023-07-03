@@ -1,6 +1,6 @@
 {
   "id": "com.tesla.energy",
-  "version": "1.1.4",
+  "version": "1.2.0",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "brandColor": "#e82127",
@@ -10,9 +10,13 @@
   "description": {
     "en": "Monitor your Tesla Energy system"
   },
-  "category": ["energy"],
+  "category": [
+    "energy"
+  ],
   "permissions": [],
-  "platforms": ["local"],
+  "platforms": [
+    "local"
+  ],
   "images": {
     "large": "/assets/images/large.jpg",
     "small": "/assets/images/small.jpg"
@@ -53,7 +57,9 @@
         "small": "/drivers/tesla-backup-gateway/assets/images/small.jpg"
       },
       "energy": {
-        "batteries": ["OTHER"]
+        "batteries": [
+          "OTHER"
+        ]
       },
       "settings": [
         {
