@@ -1,5 +1,4 @@
 {
-  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "com.tesla.energy",
   "version": "1.1.4",
   "compatibility": ">=5.0.0",
@@ -11,13 +10,9 @@
   "description": {
     "en": "Monitor your Tesla Energy system"
   },
-  "category": [
-    "energy"
-  ],
+  "category": ["energy"],
   "permissions": [],
-  "platforms": [
-    "local"
-  ],
+  "platforms": ["local"],
   "images": {
     "large": "/assets/images/large.jpg",
     "small": "/assets/images/small.jpg"
@@ -58,16 +53,8 @@
         "small": "/drivers/tesla-backup-gateway/assets/images/small.jpg"
       },
       "energy": {
-        "batteries": [
-          "OTHER"
-        ]
+        "batteries": ["OTHER"]
       },
-      "platforms": [
-        "local"
-      ],
-      "connectivity": [
-        "lan"
-      ],
       "settings": [
         {
           "type": "group",
@@ -136,112 +123,5 @@
         }
       ]
     }
-  ],
-  "capabilities": {
-    "battery_power": {
-      "type": "number",
-      "title": {
-        "en": "Powerwall draw",
-        "nl": "Powerwall-verbruik",
-        "de": "Powerwall Verbrauch"
-      },
-      "icon": "/assets/capabilities/battery-power.svg",
-      "units": {
-        "en": "W"
-      },
-      "insights": true,
-      "desc": {
-        "en": "Powerwall power draw in W"
-      },
-      "chartType": "stepLine",
-      "decimals": 2,
-      "getable": true,
-      "setable": false,
-      "uiComponent": "sensor"
-    },
-    "battery_soc": {
-      "type": "number",
-      "title": {
-        "en": "Powerwall SoC",
-        "nl": "Powerwall-laadtoestand",
-        "de": "Powerwall Ladezustand"
-      },
-      "icon": "/assets/capabilities/battery-soc.svg",
-      "units": {
-        "en": "%"
-      },
-      "insights": true,
-      "desc": {
-        "en": "Powerwall SoC percentage"
-      },
-      "chartType": "stepLine",
-      "decimals": 2,
-      "getable": true,
-      "setable": false,
-      "uiComponent": "sensor"
-    },
-    "grid_power": {
-      "type": "number",
-      "title": {
-        "en": "Grid consumption",
-        "nl": "Netverbruik",
-        "de": "Netzbezug"
-      },
-      "icon": "/assets/capabilities/grid-power.svg",
-      "units": {
-        "en": "W"
-      },
-      "insights": true,
-      "desc": {
-        "en": "Grid power consumption in W"
-      },
-      "chartType": "stepLine",
-      "decimals": 2,
-      "getable": true,
-      "setable": false,
-      "uiComponent": "sensor"
-    },
-    "home_power": {
-      "type": "number",
-      "title": {
-        "en": "Home consumption",
-        "nl": "Huisverbruik",
-        "de": "Hausverbrauch"
-      },
-      "icon": "/assets/capabilities/home-power.svg",
-      "units": {
-        "en": "W"
-      },
-      "insights": true,
-      "desc": {
-        "en": "Home power consumption in W"
-      },
-      "chartType": "stepLine",
-      "decimals": 2,
-      "getable": true,
-      "setable": false,
-      "uiComponent": "sensor"
-    },
-    "solar_power": {
-      "type": "number",
-      "title": {
-        "en": "Solar production",
-        "nl": "Productie zonnepanelen",
-        "de": "Solarenergie"
-      },
-      "icon": "/assets/capabilities/solar-power.svg",
-      "units": {
-        "en": "W"
-      },
-      "insights": true,
-      "desc": {
-        "en": "Solar production in W"
-      },
-      "chartType": "stepLine",
-      "decimals": 2,
-      "getable": true,
-      "setable": false,
-      "uiComponent": "sensor"
-    }
-  }
+  ]
 }

@@ -3,6 +3,10 @@
     "version": "1.0.0",
     "main": "app.js",
     "devDependencies": {
+        "@tsconfig/node16": "^16.1.0",
+        "@types/homey": "npm:homey-apps-sdk-v3-types@^0.3.4",
+        "@types/node": "^20.3.3",
+        "@types/node-fetch": "^2.6.4",
         "homey": "^2.9.7"
     },
     "dependencies": {

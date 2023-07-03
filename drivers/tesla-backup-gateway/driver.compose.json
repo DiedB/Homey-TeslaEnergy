@@ -1,89 +1,91 @@
 {
-    "id": "tesla-backup-gateway",
-    "name": {
-        "en": "Tesla Backup Gateway"
-    },
-    "class": "other",
-    "capabilities": [
-        "battery_power",
-        "battery_soc",
-        "measure_battery",
-        "grid_power",
-        "home_power",
-        "solar_power"
-    ],
-    "images": {
-        "large": "/drivers/tesla-backup-gateway/assets/images/large.jpg",
-        "small": "/drivers/tesla-backup-gateway/assets/images/small.jpg"
-    },
-    "energy": {
-        "batteries": ["OTHER"]
-    },
-    "settings": [
+  "id": "tesla-backup-gateway",
+  "name": {
+    "en": "Tesla Backup Gateway"
+  },
+  "class": "other",
+  "capabilities": [
+    "battery_power",
+    "battery_soc",
+    "measure_battery",
+    "grid_power",
+    "home_power",
+    "solar_power"
+  ],
+  "images": {
+    "large": "/drivers/tesla-backup-gateway/assets/images/large.jpg",
+    "small": "/drivers/tesla-backup-gateway/assets/images/small.jpg"
+  },
+  "energy": {
+    "batteries": ["OTHER"]
+  },
+  "platforms": ["local"],
+  "connectivity": ["lan"],
+  "settings": [
+    {
+      "type": "group",
+      "label": {
+        "en": "Connection"
+      },
+      "children": [
         {
-            "type": "group",
-            "label": {
-                "en": "Connection"
-            },
-            "children": [
-                {
-                    "id": "ipAddress",
-                    "type": "text",
-                    "label": {
-                        "en": "IP Address"
-                    },
-                    "hint": {
-                        "en": "The IP address or hostname of your Tesla Backup Gateway."
-                    }
-                }
-            ]
-        },
-        {
-            "type": "group",
-            "label": {
-                "en": "Credentials"
-            },
-            "children": [
-                {
-                    "id": "username",
-                    "type": "text",
-                    "label": {
-                        "en": "Username"
-                    }
-                },
-                {
-                    "id": "password",
-                    "type": "password",
-                    "label": {
-                        "en": "Password"
-                    }
-                }
-            ]
+          "id": "ipAddress",
+          "type": "text",
+          "label": {
+            "en": "IP Address"
+          },
+          "hint": {
+            "en": "The IP address or hostname of your Tesla Backup Gateway."
+          }
         }
-    ],
-    "pair": [
+      ]
+    },
+    {
+      "type": "group",
+      "label": {
+        "en": "Credentials"
+      },
+      "children": [
         {
-            "id": "ip_address"
+          "id": "username",
+          "type": "text",
+          "label": {
+            "en": "Username"
+          }
         },
         {
-            "id": "login_credentials",
-            "template": "login_credentials",
-            "options": {
-                "logo": "pair.svg",
-                "usernameLabel": "Email address",
-                "usernamePlaceholder": "elon@tesla.com"
-            }
-        },
-        {
-            "id": "list_devices",
-            "template": "list_devices",
-            "navigation": {
-                "next": "add_devices"
-            }
-        },
-        {
-            "id": "add_devices",
-            "template": "add_devices"
+          "id": "password",
+          "type": "password",
+          "label": {
+            "en": "Password"
+          }
         }
-    ]
+      ]
+    }
+  ],
+  "pair": [
+    {
+      "id": "ip_address"
+    },
+    {
+      "id": "login_credentials",
+      "template": "login_credentials",
+      "options": {
+        "logo": "pair.svg",
+        "usernameLabel": "Email address",
+        "usernamePlaceholder": "elon@tesla.com"
+      }
+    },
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": {
+        "next": "add_devices"
+      }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ]
 }
