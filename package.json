@@ -6,6 +6,6 @@
         "homey": "^2.9.7"
     },
     "dependencies": {
-        "node-fetch": "^2.6.1"
+        "node-fetch": "^2.6.12"
     }
 }
