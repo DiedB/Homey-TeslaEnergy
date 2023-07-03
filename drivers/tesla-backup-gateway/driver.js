@@ -28,7 +28,9 @@ class TeslaBackupGatewayDriver extends Homey.Driver {
 
             devices.push({
                 name: siteName,
-                data: {},
+                data: {
+                    id: siteName,
+                },
                 settings: { ipAddress: pairIpAddress, username, password },
             });
 
