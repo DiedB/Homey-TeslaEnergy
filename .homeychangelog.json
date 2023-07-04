@@ -16,5 +16,8 @@
   },
   "1.2.1": {
     "en": "Fix app entrypoint"
+  },
+  "1.2.2": {
+    "en": "Fix bug, convert app to TypeScript"
   }
 }
