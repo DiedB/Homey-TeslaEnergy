@@ -5,7 +5,7 @@ import { Driver } from "homey";
 import TeslaBackupGatewayApi from "./api";
 
 class TeslaBackupGatewayDriver extends Driver {
-  onPair(session: PairSession) {
+  async onPair(session: PairSession) {
     let pairIpAddress: string | null = null;
     let devices: TeslaEnergyDevice[] = [];
 

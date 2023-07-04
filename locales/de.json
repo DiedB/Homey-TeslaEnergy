@@ -1,7 +1,7 @@
 {
-	"pair": {
-		"enterIpAddress": "Bitte geben Sie Ihre Tesla Powerwall IP Addresse ein:",
-		"ipAddressPlaceholder": "IP Adresse",
-		"connectButton": "Verbinden"
-	}
+  "pair": {
+    "title": "Bitte geben Sie Ihre Tesla Energy-Daten ein:",
+    "ipAddressPlaceholder": "Powerwall IP-Adresse",
+    "connectButton": "Verbinden"
+  }
 }

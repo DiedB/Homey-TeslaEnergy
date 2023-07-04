@@ -1,43 +1,51 @@
 <style type="text/css">
-    .form-group,
-    .input-field {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+  .homey-teslaenergy-form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 
-    .input-field {
-        margin-top: 10px;
-    }
-
-    .submit-button {
-        margin-top: 10px;
-    }
+  .homey-teslaenergy-submit-button {
+    margin-top: auto;
+  }
 </style>
 
-<div class="form-group">
-    <div class="input-field">
-        <label><span data-i18n="pair.enterIpAddress" /></label>
-        <input type="text" id="ipAddress" placeholder="" value="" />
-    </div>
+<form class="homey-form homey-teslaenergy-form" onsubmit="onConnect(event)">
+  <h1 class="homey-title" data-i18n="pair.title"></h1>
 
-    <button
-        class="submit-button"
-        id="submit"
-        data-i18n="pair.connectButton"
-    ></button>
-</div>
+  <div class="homey-form-group">
+    <label
+      class="homey-form-label"
+      for="apiKey"
+      data-i18n="pair.ipAddressPlaceholder"
+    ></label>
+    <input
+      class="homey-form-input"
+      type="text"
+      id="ipAddress"
+      placeholder=""
+      value=""
+    />
+  </div>
 
-<script type="text/javascript">
-    $(() => {
-        $("#ipAddress").attr(
-            "placeholder",
-            Homey.__("pair.ipAddressPlaceholder")
-        );
+  <button
+    class="homey-button-primary-full homey-teslaenergy-submit-button"
+    type="submit"
+    data-i18n="pair.connectButton"
+  ></button>
+</form>
 
-        $("#submit").click(() => {
-            var ipAddress = $("#ipAddress").val();
-            Homey.emit("ip_address", { ipAddress });
-        });
+<script type="application/javascript">
+  const onConnect = async (event) => {
+    event.preventDefault(); // Prevent the form from submitting and refreshing the page
+    Homey.showLoadingOverlay();
+
+    const ipAddressInput = document.getElementById("ipAddress");
+    const ipAddress = ipAddressInput.value;
+
+    Homey.emit("ip_address", { ipAddress }).catch((error) => {
+      Homey.hideLoadingOverlay();
+      Homey.alert(error.message);
     });
+  };
 </script>
