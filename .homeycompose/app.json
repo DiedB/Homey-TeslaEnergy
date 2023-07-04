@@ -1,6 +1,6 @@
 {
   "id": "com.tesla.energy",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "brandColor": "#e82127",

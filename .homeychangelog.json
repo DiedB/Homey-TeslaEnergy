@@ -13,5 +13,8 @@
   },
   "1.2.0": {
     "en": "Rewrite app in TS, prepare for verified status"
+  },
+  "1.2.1": {
+    "en": "Fix app entrypoint"
   }
 }
