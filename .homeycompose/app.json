@@ -8,15 +8,11 @@
     "en": "Tesla Energy"
   },
   "description": {
-    "en": "Monitor your Tesla Energy system"
+    "en": "Capture, store and consume your renewable energy"
   },
-  "category": [
-    "energy"
-  ],
+  "category": ["energy"],
   "permissions": [],
-  "platforms": [
-    "local"
-  ],
+  "platforms": ["local"],
   "images": {
     "large": "/assets/images/large.jpg",
     "small": "/assets/images/small.jpg"
@@ -57,9 +53,7 @@
         "small": "/drivers/tesla-backup-gateway/assets/images/small.jpg"
       },
       "energy": {
-        "batteries": [
-          "OTHER"
-        ]
+        "batteries": ["OTHER"]
       },
       "settings": [
         {

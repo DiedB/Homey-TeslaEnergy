@@ -13,8 +13,8 @@
     "solar_power"
   ],
   "images": {
-    "large": "/drivers/tesla-backup-gateway/assets/images/large.jpg",
-    "small": "/drivers/tesla-backup-gateway/assets/images/small.jpg"
+    "large": "/drivers/tesla-backup-gateway/assets/images/large.png",
+    "small": "/drivers/tesla-backup-gateway/assets/images/small.png"
   },
   "energy": {
     "batteries": ["OTHER"]
