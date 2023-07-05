@@ -19,5 +19,8 @@
   },
   "1.2.2": {
     "en": "Fix bug, convert app to TypeScript"
+  },
+  "1.2.3": {
+    "en": "Update assets and description"
   }
 }
