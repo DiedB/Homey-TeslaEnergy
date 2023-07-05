@@ -1,21 +1,21 @@
 {
-    "type": "number",
-    "title": {
-      "en": "Grid consumption",
-      "nl": "Netverbruik",
-      "de": "Netzbezug"
-    },
-    "icon": "/assets/capabilities/grid-power.svg",
-    "units": {
-      "en": "W"
-    },
-    "insights": true,
-    "desc": {
-      "en": "Grid power consumption in W"
-    },
-    "chartType": "stepLine",
-    "decimals": 2,
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor"
-  }
+  "type": "number",
+  "title": {
+    "en": "Grid consumption",
+    "nl": "Netverbruik",
+    "de": "Netzbezug"
+  },
+  "icon": "/assets/capabilities/grid-power.svg",
+  "units": {
+    "en": "W"
+  },
+  "insights": true,
+  "desc": {
+    "en": "Grid power consumption in W"
+  },
+  "chartType": "stepLine",
+  "decimals": 2,
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor"
+}

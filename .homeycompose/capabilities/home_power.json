@@ -1,21 +1,21 @@
 {
-    "type": "number",
-    "title": {
-      "en": "Home consumption",
-      "nl": "Huisverbruik",
-      "de": "Hausverbrauch"
-    },
-    "icon": "/assets/capabilities/home-power.svg",
-    "units": {
-      "en": "W"
-    },
-    "insights": true,
-    "desc": {
-      "en": "Home power consumption in W"
-    },
-    "chartType": "stepLine",
-    "decimals": 2,
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor"
-  }
+  "type": "number",
+  "title": {
+    "en": "Home consumption",
+    "nl": "Huisverbruik",
+    "de": "Hausverbrauch"
+  },
+  "icon": "/assets/capabilities/home-power.svg",
+  "units": {
+    "en": "W"
+  },
+  "insights": true,
+  "desc": {
+    "en": "Home power consumption in W"
+  },
+  "chartType": "stepLine",
+  "decimals": 2,
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor"
+}

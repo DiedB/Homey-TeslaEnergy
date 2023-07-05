@@ -38,6 +38,118 @@
   },
   "source": "https://github.com/DiedB/Homey-TeslaEnergy",
   "support": "https://github.com/DiedB/Homey-TeslaEnergy/issues",
+  "flow": {
+    "triggers": [
+      {
+        "id": "battery_power_changed",
+        "title": {
+          "en": "Powerwall power draw updated"
+        },
+        "tokens": [
+          {
+            "name": "battery_power",
+            "type": "number",
+            "title": {
+              "en": "Powerwall draw (W)",
+              "nl": "Powerwall-verbruik (W)",
+              "de": "Powerwall Verbrauch (W)"
+            },
+            "example": {
+              "en": "3281"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=tesla-backup-gateway"
+          }
+        ]
+      },
+      {
+        "id": "grid_power_changed",
+        "title": {
+          "en": "Grid power consumption updated"
+        },
+        "tokens": [
+          {
+            "name": "grid_power",
+            "type": "number",
+            "title": {
+              "en": "Grid consumption (W)",
+              "nl": "Netverbruik (W)",
+              "de": "Netzbezug (W)"
+            },
+            "example": {
+              "en": "8912"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=tesla-backup-gateway"
+          }
+        ]
+      },
+      {
+        "id": "home_power_changed",
+        "title": {
+          "en": "Home power consumption updated"
+        },
+        "tokens": [
+          {
+            "name": "home_power",
+            "type": "number",
+            "title": {
+              "en": "Home consumption (W)",
+              "nl": "Huisverbruik (W)",
+              "de": "Hausverbrauch (W)"
+            },
+            "example": {
+              "en": "7521"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=tesla-backup-gateway"
+          }
+        ]
+      },
+      {
+        "id": "solar_power_changed",
+        "title": {
+          "en": "Solar power production updated"
+        },
+        "tokens": [
+          {
+            "name": "solar_power",
+            "type": "number",
+            "title": {
+              "en": "Solar production (W)",
+              "nl": "Productie zonnepanelen (W)",
+              "de": "Solarenergie (W)"
+            },
+            "example": {
+              "en": "4792"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=tesla-backup-gateway"
+          }
+        ]
+      }
+    ]
+  },
   "drivers": [
     {
       "id": "tesla-backup-gateway",

@@ -1,21 +1,21 @@
 {
-    "type": "number",
-    "title": {
-      "en": "Solar production",
-      "nl": "Productie zonnepanelen",
-      "de": "Solarenergie"
-    },
-    "icon": "/assets/capabilities/solar-power.svg",
-    "units": {
-      "en": "W"
-    },
-    "insights": true,
-    "desc": {
-      "en": "Solar production in W"
-    },
-    "chartType": "stepLine",
-    "decimals": 2,
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor"
-  }
+  "type": "number",
+  "title": {
+    "en": "Solar production",
+    "nl": "Productie zonnepanelen",
+    "de": "Solarenergie"
+  },
+  "icon": "/assets/capabilities/solar-power.svg",
+  "units": {
+    "en": "W"
+  },
+  "insights": true,
+  "desc": {
+    "en": "Solar production in W"
+  },
+  "chartType": "stepLine",
+  "decimals": 2,
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor"
+}

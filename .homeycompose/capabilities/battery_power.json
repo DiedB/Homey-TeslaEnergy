@@ -1,21 +1,21 @@
 {
-    "type": "number",
-    "title": {
-      "en": "Powerwall draw",
-      "nl": "Powerwall-verbruik",
-      "de": "Powerwall Verbrauch"
-    },
-    "icon": "/assets/capabilities/battery-power.svg",
-    "units": {
-      "en": "W"
-    },
-    "insights": true,
-    "desc": {
-      "en": "Powerwall power draw in W"
-    },
-    "chartType": "stepLine",
-    "decimals": 2,
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor"
-  }
+  "type": "number",
+  "title": {
+    "en": "Powerwall draw",
+    "nl": "Powerwall-verbruik",
+    "de": "Powerwall Verbrauch"
+  },
+  "icon": "/assets/capabilities/battery-power.svg",
+  "units": {
+    "en": "W"
+  },
+  "insights": true,
+  "desc": {
+    "en": "Powerwall power draw in W"
+  },
+  "chartType": "stepLine",
+  "decimals": 2,
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor"
+}

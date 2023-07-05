@@ -1,21 +1,21 @@
 {
-    "type": "number",
-    "title": {
-      "en": "Powerwall SoC",
-      "nl": "Powerwall-laadtoestand",
-      "de": "Powerwall Ladezustand"
-    },
-    "icon": "/assets/capabilities/battery-soc.svg",
-    "units": {
-      "en": "%"
-    },
-    "insights": true,
-    "desc": {
-      "en": "Powerwall SoC percentage"
-    },
-    "chartType": "stepLine",
-    "decimals": 2,
-    "getable": true,
-    "setable": false,
-    "uiComponent": "sensor"
-  }
+  "type": "number",
+  "title": {
+    "en": "Powerwall SoC",
+    "nl": "Powerwall-laadtoestand",
+    "de": "Powerwall Ladezustand"
+  },
+  "icon": "/assets/capabilities/battery-soc.svg",
+  "units": {
+    "en": "%"
+  },
+  "insights": true,
+  "desc": {
+    "en": "Powerwall SoC percentage"
+  },
+  "chartType": "stepLine",
+  "decimals": 2,
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor"
+}
