@@ -26,6 +26,11 @@ class TeslaBackupGatewayDevice extends Device {
       );
     }
 
+    // Temporary: add measure_battery capability if not attached to device
+    if (!this.hasCapability("measure_battery")) {
+      await this.addCapability("measure_battery");
+    }
+
     // Initialize update interval
     this.updateInterval = this.homey.setInterval(
       this.updateDeviceState.bind(this),
