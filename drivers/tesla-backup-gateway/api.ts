@@ -4,6 +4,7 @@ import {
   ApiBatterySoeResponse,
   ApiMeterAggregatesResponse,
   ApiSitenameResponse,
+  ApiGridStatusResponse
 } from "./types";
 
 const ENDPOINTS = {
@@ -12,6 +13,7 @@ const ENDPOINTS = {
   siteName: "/site_info/site_name",
   batterySoc: "/system_status/soe",
   meterAggregates: "/meters/aggregates",
+  gridStatus: "/system_status/grid_status"
 };
 
 class TeslaBackupGatewayApi {
@@ -105,6 +107,15 @@ class TeslaBackupGatewayApi {
       );
 
     return meterAggregatesResponse;
+  }
+
+  async getGridStatus() {
+    const gridStatusResponse =
+      await this.fetchApiEndpoint<ApiGridStatusResponse>(
+        ENDPOINTS.gridStatus
+      );
+
+    return gridStatusResponse;
   }
 }
 

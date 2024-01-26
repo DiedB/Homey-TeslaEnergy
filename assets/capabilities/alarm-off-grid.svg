@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 30 30" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+  <path d="M 26 11 A 1 1 0 1 0 26 13 A 1 1 0 1 0 26 11 z M 15 2 A 1 1 0 1 0 15 4 A 1 1 0 1 0 15 2 z M 4 11 A 1 1 0 1 0 4 13 A 1 1 0 1 0 4 11 z M 25 11 h -3 V 6 c 0 -0.6 0.4 -1 1 -1 h 1 c 0.6 0 1 0.4 1 1 V 11 z" style="" transform="matrix(0.9999999999999999, 0, 0, 0.9999999999999999, 0, 0)"/>
+  <path d="M 15 3 v 10 h 11 l 0.7 -1.7 L 15.7 2.3 L 15 3 z M 14.3 2.3 L 3.3 11.3 L 4 13 h 11 V 3 L 14.3 2.3 z" transform="matrix(0.9999999999999999, 0, 0, 0.9999999999999999, 0, 0)"/>
+  <path d="M 5.1 0.9 S 16 18.1 16 18.1" fill="rgb(255, 255, 255)" transform="matrix(0.9999999999999999, 0, 0, 0.9999999999999999, 0, 0)"/>
+  <text style="font-family: Arial, sans-serif; font-size: 10.1px; font-weight: 700; text-transform: capitalize; white-space: pre;" transform="matrix(1.1212210655212402, 0, 0, 1.1074670553207397, -1.863955020904541, -0.8993989825248718)" x="11.459" y="21.774">X</text>
+  <rect x="4.256" y="13.065" width="2.415" height="11.91" style="stroke: rgb(0, 0, 0);" transform="matrix(0.9999999999999999, 0, 0, 0.9999999999999999, 0, 0)"/>
+  <rect x="3.478" y="26.939" width="23.165" height="0.368" style="stroke: rgb(0, 0, 0);" transform="matrix(0.9999999999999999, 0, 0, 0.9999999999999999, 0, 0)"/>
+  <rect x="3.813" y="-82552.445" width="0.858" height="3.355" style="stroke: rgb(0, 0, 0);" transform="matrix(0.9999999999999999, 0, 0, 0.9999999999999999, 10.796411514282227, 82575.453125)"/>
+  <rect x="23.205" y="13.106" width="2.415" height="11.91" style="stroke: rgb(0, 0, 0);" transform="matrix(0.9999999999999999, 0, 0, 0.9999999999999999, 0, 0)"/>
+</svg>

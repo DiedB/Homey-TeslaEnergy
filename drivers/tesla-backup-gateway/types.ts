@@ -124,3 +124,8 @@ export interface ApiMeterAggregatesResponse {
     i_c_current: number;
   };
 }
+
+export interface ApiGridStatusResponse {
+  grid_status: string;
+  grid_services_active: boolean;
+}

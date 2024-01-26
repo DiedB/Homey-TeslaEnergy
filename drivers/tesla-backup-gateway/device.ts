@@ -69,6 +69,7 @@ class TeslaBackupGatewayDevice extends Device {
         const batterySoc = await this.teslaBackupGatewayApi.getBatterySoc();
         const meterAggregates =
           await this.teslaBackupGatewayApi.getMeterAggregates();
+        const gridStatus = await this.teslaBackupGatewayApi.getGridStatus();
 
         if (!this.getAvailable()) {
           this.setAvailable();
@@ -88,10 +89,19 @@ class TeslaBackupGatewayDevice extends Device {
           "home_power",
           meterAggregates.load.instant_power
         );
-        this.setCapabilityValue(
-          "solar_power",
-          meterAggregates.solar.instant_power
-        );
+
+        var solarInstantPower = 0;  // Solar value returned should never be <0 but the Powerwall Api does return <0 even at nighttime
+        if(meterAggregates.solar.instant_power > 0) {
+          solarInstantPower = meterAggregates.solar.instant_power;
+        }
+        this.setCapabilityValue("solar_power", solarInstantPower);
+        
+        var offGrid = false;
+        if(gridStatus.grid_status != 'SystemGridConnected') {
+          offGrid = true;
+        }
+        this.setCapabilityValue("alarm_off_grid", offGrid);
+
       } catch (error: unknown) {
         this.error(error);
         this.setUnavailable(

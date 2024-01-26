@@ -10,7 +10,8 @@
     "measure_battery",
     "grid_power",
     "home_power",
-    "solar_power"
+    "solar_power",
+    "alarm_off_grid"
   ],
   "images": {
     "large": "/drivers/tesla-backup-gateway/assets/images/large.png",
