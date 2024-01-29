@@ -1,0 +1,13 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Off Grid Alarm",
+    "nl": "Netverbruik alarm",
+    "de": "Netzbezug alarm"
+  },
+  "icon": "/assets/capabilities/alarm-off-grid.svg",
+    "insights": false,
+    "getable": true,
+  "setable": false,
+  "uiComponent": "sensor"
+}
