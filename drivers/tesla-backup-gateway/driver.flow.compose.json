@@ -65,8 +65,8 @@
       ]
     },
     {
-      "id": "alarm_off_grid_changed",
-      "title": { "en": "Powerwall Off Grid Alarm updated" },
+      "id": "alarm_off_grid_true",
+      "title": { "en": "Powerwall is off the grid" },
       "tokens": [
         {
           "name": "alarm_off_grid",
@@ -76,9 +76,26 @@
             "nl": "Netverbruik alarm",
             "de": "Netzbezug alarm"
           },
-          "example": { "en": "false" }
+          "example": { "en": "Yes" }
+        }
+      ]
+    },
+    {
+      "id": "alarm_off_grid_false",
+      "title": { "en": "Powerwall is on the grid" },
+      "tokens": [
+        {
+          "name": "alarm_off_grid",
+          "type": "boolean",
+          "title": {
+            "en": "Off Grid Alarm",
+            "nl": "Netverbruik alarm",
+            "de": "Netzbezug alarm"
+          },
+          "example": { "en": "No" }
         }
       ]
     }
+    
   ]
 }

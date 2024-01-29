@@ -6,16 +6,8 @@
     "de": "Netzbezug alarm"
   },
   "icon": "/assets/capabilities/alarm-off-grid.svg",
-  "units": {
-    "en": ""
-  },
-  "insights": false,
-  "desc": {
-    "en": "Off Grid Alarm"
-  },
-  "chartType": "stepLine",
-  "decimals": 2,
-  "getable": true,
+    "insights": false,
+    "getable": true,
   "setable": false,
   "uiComponent": "sensor"
 }
