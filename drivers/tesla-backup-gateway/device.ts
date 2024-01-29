@@ -26,10 +26,8 @@ class TeslaBackupGatewayDevice extends Device {
       );
     }
 
-    // Temporary: add measure_battery capability if not attached to device
-    if (!this.hasCapability("measure_battery")) {
-      await this.addCapability("measure_battery");
-    }
+    // Add any missing capabilities due to app updates
+    await this.updateCapabilities();
 
     // Initialize update interval
     this.updateInterval = this.homey.setInterval(
@@ -55,6 +53,17 @@ class TeslaBackupGatewayDevice extends Device {
 
   onDeleted() {
     this.homey.clearInterval(this.updateInterval);
+  }
+
+  // Add capabilities if not attached to device
+  async updateCapabilities(){
+    if (!this.hasCapability("measure_battery")) {
+      await this.addCapability("measure_battery");
+    }
+
+    if (!this.hasCapability('alarm_off_grid')){
+        await this.addCapability('alarm_off_grid');
+    }
   }
 
   async updateDeviceState() {
